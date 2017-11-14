@@ -6,7 +6,7 @@ This will not stand, man.
 
 ## How to get the old behaviour back
 
-* Copy Preview.app with version 9.0 from a Computer still running macOS Sierra, or from a Time Machine backup
+* Copy Preview.app with version 9.0 from a computer still running macOS Sierra, or from a Time Machine backup
 * (Alternatively, checkout this repo or download https://github.com/frhd/macOS-Preview9.0/archive/master.zip)
 * Move Preview.app to your User/Applications folder (not the one in the sidebar, but in your Home folder - create it if necessary)
 * Set Preview.app (9.0) as default PDF Viewer for all PDFs ([Instructions](http://osxdaily.com/2011/10/31/set-default-pdf-viewer-mac-os-x/))
