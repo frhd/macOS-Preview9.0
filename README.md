@@ -10,3 +10,5 @@ This will not stand, man.
 * (Alternatively, checkout this repo or download https://github.com/frhd/macOS-Preview9.0/archive/master.zip)
 * Move Preview.app to your User/Applications folder (not the one in the sidebar, but in your Home folder - create it if necessary)
 * Set Preview.app (9.0) as default PDF Viewer for all PDFs ([Instructions](http://osxdaily.com/2011/10/31/set-default-pdf-viewer-mac-os-x/))
+
+Of course, if you need Preview 9.0 for all users, rename it to Preview9.app and move it to the root Applications folder in the sidebar.
