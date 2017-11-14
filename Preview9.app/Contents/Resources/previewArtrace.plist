@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Name</key>
+            <string>Preview FullScreen Transitions</string>
+            <key>Children</key>
+            <array>
+                <dict>
+                    <key>Name</key>
+                    <string>Exit Full Screen Prep Work</string>
+                    <key>Type</key>
+                    <string>Interval</string>
+                    <key>Component</key>
+                    <string>225</string>
+                    <key>CodeBegin</key>
+                    <string>1</string>
+                    <key>CodeEnd</key>
+                    <string>2</string>
+                </dict>
+            </array>
+            <key>Name</key>
+            <string>Preview Content Load</string>
+            <key>Children</key>
+            <array>
+                <dict>
+                    <key>Name</key>
+                    <string>Set Media Element</string>
+                    <key>Type</key>
+                    <string>Interval</string>
+                    <key>Component</key>
+                    <string>225</string>
+                    <key>CodeBegin</key>
+                    <string>3</string>
+                    <key>CodeEnd</key>
+                    <string>4</string>
+                </dict>
+                <dict>
+                    <key>Name</key>
+                    <string>Load Annotations</string>
+                    <key>Type</key>
+                    <string>Interval</string>
+                    <key>Component</key>
+                    <string>225</string>
+                    <key>CodeBegin</key>
+                    <string>5</string>
+                    <key>CodeEnd</key>
+                    <string>6</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</plist>

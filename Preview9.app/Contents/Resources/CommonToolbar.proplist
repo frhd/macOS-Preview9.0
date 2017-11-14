@@ -1,0 +1,467 @@
+{
+	defaultItems = (
+		"view",
+		"zoom",
+		"share",
+		"NSToolbarFlexibleSpaceItem",
+		"markup",
+		"rotate",
+		"edit_banner",
+		"search"
+	);
+	allowedItems = (
+		"view",
+		"zoom",
+		"zoom_and_actual",
+		"zoom_to_fit",
+		"actual_size",
+		"scale",
+		"previous_next",
+		"back_forward",
+		"goto_page",
+		"slideshow",
+		"inspector",
+		"loupe",
+		"selection",
+		"print",
+		"share",
+		"markup",
+		"rotate",
+		"edit_banner",
+		"search",
+		"NSToolbarSeparatorItem",
+		"NSToolbarSpaceItem",
+		"NSToolbarFlexibleSpaceItem"
+	);
+	items = (
+		{
+			class = "PVSegmentedToolbarItem";
+			identifier = "view";
+			tag = 1;
+			trackingMode = 0;
+			AXDescription = "View Menu";
+			segments = (
+				{
+					action = "dummyActionForViewButton:";
+					identifier = "viewmenu";
+					image = "NSSidebarTemplate";
+					label = "View";
+					tag = 0;
+					toolTip = "View Menu";
+					AXDescription = "View Menu";
+					menu = (
+						{
+							action = "toggleHideSidebar:";
+							title = "Hide Sidebar";
+						},
+						{
+							action = "setViewModeContentAndThumbnails:";
+							title = "Thumbnails";
+						},
+						{
+							action = "setViewModeContentAndOutline:";
+							title = "Table of Contents";
+						},
+						{
+							action = "setViewModeContentAndAnnotations:";
+							title = "TB_Annotations";
+						},
+						{
+							action = "setViewModeContentAndBookmarks:";
+							title = "Bookmarks";
+						},
+						{
+							action = "setViewModeContactSheet:";
+							title = "Contact Sheet";
+						},
+						{},
+						{
+							action = "setPageViewModeScroll:";
+							title = "Continuous Scroll";
+						},
+						{
+							action = "setPageViewModeBookSinglePage:";
+							title = "Single Page";
+						},
+						{
+							action = "setPageViewModeBookFacingPages:";
+							title = "Two Pages";
+						},
+					);
+				},
+			);
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			identifier = "zoom";
+			label = "Zoom";
+			tag = 10;
+			trackingMode = 2;
+			AXDescription = "Zoom";
+			segments = (
+				{
+					action = "doZoomOut:";
+					identifier = "zoom_out";
+					image = "TB_zoomOut";
+					label = "Zoom Out";
+					tag = 0;
+					toolTip = "Scale document down";
+					AXDescription = "Zoom Out";
+				},
+				{
+					action = "doZoomIn:";
+					identifier = "zoom_in";
+					image = "TB_zoomIn";
+					label = "Zoom In";
+					tag = 1;
+					toolTip = "Scale document up";
+					AXDescription = "Zoom In";
+				},
+			);
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			identifier = "zoom_and_actual";
+			label = "Zoom";
+			tag = 11;
+			trackingMode = 2;
+			AXDescription = "Zoom";
+			segments = (
+				{
+					action = "doZoomOut:";
+					identifier = "zoom_out";
+					image = "TB_zoomOut";
+					tag = 0;
+					toolTip = "Scale document down";
+					AXDescription = "Zoom Out";
+				},
+				{
+					action = "doZoomToActualSize:";
+					identifier = "actual_size";
+					image = "TB_actualSize";
+					tag = 1;
+					toolTip = "Display at actual size";
+					AXDescription = "Actual Size";
+				},
+				{
+					action = "doZoomIn:";
+					identifier = "zoom_in";
+					image = "TB_zoomIn";
+					tag = 2;
+					toolTip = "Scale document up";
+					AXDescription = "Zoom In";
+				},
+			);
+		},
+		{
+			class = "PVToolbarItem";
+			action = "doZoomToFit:";
+			identifier = "zoom_to_fit";
+			image = "TB_fitPopup";
+			label = "Zoom to Fit";
+			tag = 12;
+			toolTip = "Zoom to Fit";
+			AXDescription = "Zoom to Fit";
+		},
+		{
+			class = "PVToolbarItem";
+			action = "doZoomToActualSize:";
+			identifier = "actual_size";
+			image = "TB_actualSize";
+			label = "Actual Size";
+			tag = 13;
+			toolTip = "Display at actual size";
+			AXDescription = "Actual Size";
+		},
+		{
+			class = "PVPercentTextToolbarItem";
+			action = "doZoomToFactor:";
+			identifier = "scale";
+			label = "Scale";
+			tag = 14;
+			toolTip = "Scale by percentage";
+			AXDescription = "Scale";
+			menuFormRep = {
+				title = "Scale...";
+				action = "openScaleFactorPanel:";
+				noAutoGenerate = 1;
+			};
+		},
+		{
+			class = "PVGPSegmentedToolbarItem";
+			identifier = "previous_next";
+			tag = 20;
+			trackingMode = 2;
+			AXDescription = "Page Navigation";
+			segments = (
+				{
+					action = "doGoBackwardInstantly:";
+					identifier = "goto_previous_page";
+					image = "TB_pageUp";
+					label = "Previous";
+					tag = 0;
+					toolTip = "Go to previous item";
+					AXDescription = "Previous Item";
+				},
+				{
+					action = "doGoForwardInstantly:";
+					identifier = "goto_next_page";
+					image = "TB_pageDown";
+					label = "Next";
+					tag = 1;
+					toolTip = "Go to next item";
+					AXDescription = "Next Item";
+				},
+			);
+			menuFormRep = {
+				title = "Prev/Next";
+			};
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			identifier = "back_forward";
+			label = "Page History";
+			tag = 21;
+			trackingMode = 2;
+			segmentMinWidth = 23; //matches Safari
+			AXDescription = "Page History";
+			segments = (
+				{
+					action = "doGoBackInHistory:";
+					identifier = "go_back_recent_page";
+					image = "NSLeftFacingTriangleTemplate";
+					tag = 0;
+					toolTip = "Go back in page history";
+					AXDescription = "Go Back";
+				},
+				{
+					action = "doGoForwardInHistory:";
+					identifier = "go_forward_recent_page";
+					image = "NSRightFacingTriangleTemplate";
+					tag = 1;
+					toolTip = "Go forward in page history";
+					AXDescription = "Go Forward";
+				},
+			);
+		},
+		{
+			class = "PVPageNumberToolbarItem";
+			action = "goToPageNumber:";
+			identifier = "goto_page";
+			label = "Page";
+			tag = 22;
+			toolTip = "Go to a specific page";
+			AXDescription = "Go to Page Number";
+			menuFormRep = {
+				title = "Go to Page...";
+				action = "goToPageNumberPanel:";
+				noAutoGenerate = 1;
+			};
+		},
+        {
+			class = "PVToolbarItem";
+			action = "slideshow:";
+			identifier = "slideshow";
+			image = "NSSlideshow";
+			label = "Slideshow";
+			tag = 30;
+			toolTip = "Slideshow";
+			AXDescription = "Slideshow";
+		},
+		{
+			class = "PVToolbarItem";
+			action = "showInspectorWindow:";
+			identifier = "inspector";
+			image = "NSToolbarGetInfoTemplate";
+			label = "Inspector";
+			tag = 40;
+			toolTip = "Inspector";
+			AXDescription = "Inspector";
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			action = "pickToolFromSenderTag:";
+			identifier = "loupe";
+			label = "Magnify";
+			tag = 1000;
+			trackingMode = 1;
+			toolTip = "Show the Magnifier";
+			AXDescription = "Toggle Magnifier";
+			segments = (
+				{
+					action = "pickToolFromSenderTag:";
+					identifier = "loupe_segment";
+					image = "TB_loupe_round";
+					tag = 1000;
+					toolTip = "Show the Magnifier";
+					AXDescription = "Toggle Magnifier";
+				},
+			);
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			action = "pickToolFromSenderTag:";
+			identifier = "selection";
+			label = "Selection";
+			tag = 815;
+			trackingMode = 1;
+			toolTip = "Rectangular Selection";
+			AXDescription = "Rectangular Selection";
+			segments = (
+				{
+					action = "pickToolFromSenderTag:";
+					identifier = "selection_segment";
+					image = "TB_selection_rectangle_small";
+					tag = 815;
+					toolTip = "Rectangular Selection";
+					AXDescription = "Rectangular Selection";
+				},
+			);
+		},
+		{
+			class = "PVToolbarItem";
+			action = "printAllContainers:";
+			identifier = "print";
+			image = "NSPrint";
+			label = "Print";
+			tag = 50;
+			toolTip = "Print";
+			AXDescription = "Print";
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			identifier = "share";
+			tag = 60;
+			trackingMode = 0;
+			AXDescription = "Share";
+			segments = (
+				{
+					action = "dummyActionForShareButton:";
+					identifier = "share";
+					image = "NSShare";
+					label = "Share";
+					tag = 0;
+//					segmentWidth = 26; // Would match Safari
+					toolTip = "Share";
+					AXDescription = "Share";
+					menu = ();
+				},
+			);
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			identifier = "markup";
+			label = "TOOLBAR_Highlight";
+			action = "pickToolFromSenderTag:";
+			tag = 250;
+			trackingMode = 1;
+			AXDescription = "TOOLBAR_Highlight";
+			segments = (
+				{
+					action = "pickToolFromSenderTag:";
+					identifier = "markup_toggle";
+					image = "TB_annotMarkupHighlightTemplate";
+					tag = 250;
+					segmentWidth = 31;
+					toolTip = "TOOLBAR_Highlight";
+					AXDescription = "TOOLBAR_Highlight";
+				},
+				{
+					action = "pickToolFromSenderTag:";
+					identifier = "markup_menu";
+					tag = 250;
+					segmentWidth = 17;
+					toolTip = "TOOLBAR_Highlight";
+					AXDescription = "TOOLBAR_Highlight";
+					menu = (
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 257;
+							title = "TB_Yellow";
+						},
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 255;
+							title = "TB_Green";
+						},
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 256;
+							title = "TB_Blue";
+						},
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 258;
+							title = "TB_Pink";
+						},
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 259;
+							title = "TB_Purple";
+						},
+						{
+							tag = 0;
+							title = "";
+						},
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 252;
+							image = "TB_annotMarkupUnderlineTemplate";
+							title = "Underline";
+						},
+						{
+							action = "pickToolFromSenderTag:";
+							tag = 251;
+							image = "TB_annotMarkupStrikethroughTemplate";
+							title = "Strikethrough";
+						},
+					);
+				}
+			);
+		},
+		{
+			class = "PVToolbarItem";
+			action = "pickToolFromSenderTag:";
+			identifier = "rotate";
+			image = "TB_rotate";
+			label = "Rotate";
+			tag = 905;
+			toolTip = "Rotate";
+			AXDescription = "Rotate";
+		},
+		{
+			class = "PVSegmentedToolbarItem";
+			action = "toggleEditBanner:";
+			identifier = "edit_banner";
+			label = "Markup";
+			tag = 70;
+			trackingMode = 1;
+			toolTip = "TB_ShowMarkupToolbar";
+			AXDescription = "Toggle Markup Toolbar";
+			segments = (
+				{
+					action = "toggleEditBanner:";
+					identifier = "edit_banner_segment";
+					image = "TB_edit";
+					tag = 71;
+					toolTip = "TB_ShowMarkupToolbar";
+					AXDescription = "Toggle Markup Toolbar";
+				},
+			);
+		},
+		{
+			class = "PVSearchToolbarItem";
+			action = "doSearchField:";
+			identifier = "search";
+			label = "Search";
+			tag = 80;
+			toolTip = "Search documents and file names for text";
+			AXDescription = "Search";
+			menuFormRep = {
+				title = "Search...";
+				action = "openSearchPanel:";
+				noAutoGenerate = 1;
+			};
+		},
+	);
+}
