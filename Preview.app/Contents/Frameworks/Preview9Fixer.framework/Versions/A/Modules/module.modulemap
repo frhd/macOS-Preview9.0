@@ -1,0 +1,6 @@
+framework module Preview9Fixer {
+  umbrella header "Preview9Fixer.h"
+
+  export *
+  module * { export * }
+}
